@@ -38,6 +38,7 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final color = _getColorFromHex(project.color);
     final progress = totalTasks > 0 ? completedTasks / totalTasks : 0.0;
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return GestureDetector(
       onTap: onTap,
@@ -46,7 +47,9 @@ class ProjectCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(AppDimen.radiusLg),
             gradient: LinearGradient(
-              colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+              colors: isDarkMode
+                  ? [color, color.withOpacity(0.8)]
+                  : [color.withOpacity(0.1), color.withOpacity(0.05)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -98,7 +101,9 @@ class ProjectCard extends StatelessWidget {
                     child: LinearProgressIndicator(
                       value: progress,
                       minHeight: 6,
-                      backgroundColor: AppColors.grey200,
+                      backgroundColor: isDarkMode
+                          ? AppColors.grey700
+                          : AppColors.grey200,
                       valueColor: AlwaysStoppedAnimation<Color>(color),
                     ),
                   ),

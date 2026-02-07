@@ -11,6 +11,7 @@ class AppColors {
   // Secondary colors
   static const Color secondary = Color(0xFF10B981);
   static const Color secondaryLight = Color(0xFFD1FAE5);
+  static const Color secondaryDark = Color(0xFF047857);
 
   // Neutral colors
   static const Color white = Color(0xFFFFFFFF);
@@ -30,6 +31,7 @@ class AppColors {
   static const Color success = Color(0xFF10B981);
   static const Color warning = Color(0xFFF59E0B);
   static const Color danger = Color(0xFFEF4646);
+  static const Color dangerDark = Color(0xFFDC2626);
   static const Color info = Color(0xFF06B6D4);
 
   // Background colors
@@ -49,4 +51,3 @@ class AppColors {
     end: Alignment.bottomCenter,
   );
 }
-

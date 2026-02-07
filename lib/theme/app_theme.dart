@@ -33,15 +33,16 @@ ThemeData _buildLightTheme() {
       foregroundColor: AppColors.grey900,
       elevation: 0,
       centerTitle: false,
-      titleTextStyle:
-          AppTextStyles.headingLarge.copyWith(color: AppColors.grey900),
+      titleTextStyle: AppTextStyles.headingLarge.copyWith(
+        color: AppColors.grey900,
+      ),
       surfaceTintColor: Colors.transparent,
     ),
 
     // Cards
     cardTheme: CardThemeData(
-      color: AppColors.white,
-      elevation: 1,
+      color: const Color.fromARGB(255, 255, 255, 255),
+      elevation: 5,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppDimen.radiusLg),
       ),
@@ -184,13 +185,35 @@ ThemeData _buildDarkTheme() {
     useMaterial3: true,
     brightness: Brightness.dark,
 
-    // Esquema de cores para dark mode
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
+    // Esquema de cores para dark mode - cores exatas, não transformadas
+    colorScheme: ColorScheme(
       brightness: Brightness.dark,
       primary: AppColors.primary,
-      secondary: AppColors.secondary,
-      tertiary: AppColors.danger,
+      onPrimary: lightGrey,
+      primaryContainer: AppColors.primaryDark,
+      onPrimaryContainer: lightGrey,
+      secondary: AppColors.secondaryDark,
+      onSecondary: lightGrey,
+      secondaryContainer: AppColors.secondaryDark,
+      onSecondaryContainer: lightGrey,
+      tertiary: AppColors.dangerDark,
+      onTertiary: lightGrey,
+      tertiaryContainer: AppColors.dangerDark,
+      onTertiaryContainer: lightGrey,
+      error: AppColors.dangerDark,
+      onError: lightGrey,
+      errorContainer: AppColors.dangerDark,
+      onErrorContainer: lightGrey,
+      surface: midnightBlue,
+      onSurface: lightGrey,
+      surfaceVariant: darkGrey,
+      onSurfaceVariant: lightGrey,
+      outline: darkGrey,
+      outlineVariant: darkGrey,
+      scrim: darkBg,
+      inverseSurface: lightGrey,
+      onInverseSurface: darkBg,
+      inversePrimary: lightGrey,
     ),
 
     // Scaffold - Fundo preto
@@ -208,7 +231,7 @@ ThemeData _buildDarkTheme() {
 
     // Cards - Azul meia-noite
     cardTheme: CardThemeData(
-      color: midnightBlue,
+      color: const Color.fromARGB(192, 19, 16, 160),
       elevation: 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(AppDimen.radiusLg),
