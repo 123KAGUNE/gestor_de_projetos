@@ -236,10 +236,6 @@ Se encontrou um bug, por favor abra uma **Issue** descrevendo:
 - Passos para reproduzir o problema
 - Device/versão do Flutter utilizados
 
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
 ## 👨‍💻 Autor
 
 Desenvolvido como um projeto pessoal de produtividade.
