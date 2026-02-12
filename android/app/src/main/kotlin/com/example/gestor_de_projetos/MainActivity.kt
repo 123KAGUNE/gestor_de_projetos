@@ -1,4 +1,4 @@
-package com.example.gestor_de_projetos
+package com.example.Plannex
 
 import io.flutter.embedding.android.FlutterActivity
 

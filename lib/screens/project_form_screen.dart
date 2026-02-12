@@ -24,7 +24,7 @@ class _ProjectFormScreenState extends State<ProjectFormScreen> {
     '#10B981', // Verde
     '#F59E0B', // Âmbar
     '#EF4646', // Vermelho
-    '#8B5CF6', // Roxo
+    '#800080', // Roxo
     '#EC4899', // Rosa
   ];
 

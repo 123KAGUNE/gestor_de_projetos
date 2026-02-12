@@ -31,7 +31,7 @@ class ProjectManagerApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, _) {
           return MaterialApp(
-            title: 'Gestor de Projetos',
+            title: 'Plannex',
             debugShowCheckedModeBanner: false,
             theme: buildAppTheme(isDarkMode: themeProvider.isDarkMode),
             home: const HomeScreen(),
