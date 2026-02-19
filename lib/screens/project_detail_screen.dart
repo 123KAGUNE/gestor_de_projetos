@@ -67,7 +67,7 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen>
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _addItem(context),
-        child: _getFabIcon(),
+        child: const Icon(Icons.add),
       ),
     );
   }

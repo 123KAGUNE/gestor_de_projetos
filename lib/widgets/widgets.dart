@@ -49,7 +49,7 @@ class ProjectCard extends StatelessWidget {
             gradient: LinearGradient(
               colors: isDarkMode
                   ? [color, color.withOpacity(0.8)]
-                  : [color.withOpacity(1), color.withOpacity(0.6)],
+                  : [color.withOpacity(0.5), color.withOpacity(0.3)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -224,14 +224,31 @@ class TaskTile extends StatelessWidget {
           onChanged: (_) => onToggle?.call(),
           activeColor: AppColors.primary,
         ),
-        title: Text(
-          task.title,
-          style: AppTextStyles.bodyMedium.copyWith(
-            decoration: task.completed ? TextDecoration.lineThrough : null,
-            color: task.completed
-                ? colorScheme.onSurfaceVariant
-                : colorScheme.onSurface,
-          ),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              task.title,
+              style: AppTextStyles.bodyMedium.copyWith(
+                decoration: task.completed ? TextDecoration.lineThrough : null,
+                color: task.completed
+                    ? colorScheme.onSurfaceVariant
+                    : colorScheme.onSurface,
+              ),
+            ),
+            if (task.description.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: Text(
+                  task.description,
+                  style: AppTextStyles.bodySmall.copyWith(
+                    color: colorScheme.onSurfaceVariant,
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+          ],
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: AppDimen.sm),
