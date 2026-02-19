@@ -49,7 +49,7 @@ class ProjectCard extends StatelessWidget {
             gradient: LinearGradient(
               colors: isDarkMode
                   ? [color, color.withOpacity(0.8)]
-                  : [color.withOpacity(0.1), color.withOpacity(0.05)],
+                  : [color.withOpacity(1), color.withOpacity(0.6)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
