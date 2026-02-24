@@ -271,6 +271,21 @@ class TaskTile extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(width: AppDimen.sm),
+              if (task.dueDate != null) ...[
+                Icon(
+                  Icons.calendar_today,
+                  size: 14,
+                  color: colorScheme.onSurfaceVariant,
+                ),
+                const SizedBox(width: AppDimen.xs),
+                Text(
+                  '${task.dueDate!.day}/${task.dueDate!.month}/${task.dueDate!.year}',
+                  style: AppTextStyles.labelSmall.copyWith(
+                    color: colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
             ],
           ),
         ),
